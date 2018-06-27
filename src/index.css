@@ -1,0 +1,249 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.flyout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+input[type="text"] {
+  background-color: lightsteelblue;
+  outline: none;
+  border: 0px solid;
+}
+.customise-icon {
+  color: blue;
+}
+.header {
+  padding: 15px 20px;
+  border-bottom: 1px solid lightgrey;
+  height: 3.5rem;
+}
+
+.header h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.dashboard-header {
+  padding: 0.9rem;
+  border-bottom: 1px solid lightgrey;
+}
+.paa {
+  padding-top: 7px;
+}
+
+.sidebar {
+  border-right: 1px solid lightgrey;
+  padding-right: 0px;
+}
+
+a {
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+.home-feature-box .fa {
+  font-size: 6rem;
+}
+
+.home-feature-box span {
+  display: block;
+  color: #111;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.example-components-list li > a {
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.example-components-list li:last-child > a {
+  border-bottom: 0;
+}
+
+.example-components-list li > a .fa {
+  color: rgba(0, 0, 0, 0.35);
+  float: right;
+}
+
+.p0 {
+  padding: 0px !important;
+}
+
+.m0 {
+  margin: 0px !important;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.column {
+  float: left;
+  width: 28%;
+  padding: 10px;
+  height: 300px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left {
+  left: 0;
+  /* background-color: #111; */
+}
+
+.right {
+  right: 0;
+  /* background-color: red; */
+}
+
+.content {
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  /* background-color: DodgerBlue; */
+  width: 100%;
+  height: 30%;
+}
+
+.genericCard {
+  height: auto;
+  margin: 16px 10px 10px 16px;
+}
+
+.card-title {
+  padding: 1rem;
+}
+
+.genericCardHTag {
+  font-size: 18px;
+  color: #000;
+}
+
+.material-icons {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.genericCardHTagChild {
+  font-size: 15px;
+  color: #000;
+}
+.icons {
+  width: 15px;
+  height: 15px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #eee;
+  margin: 0px;
+  padding: 0.8rem !important;
+}
+
+.iconsSize {
+  font-size: 20px !important;
+  margin-right: 8px;
+}
+
+.subtitle-span-child {
+  margin-left: 26px;
+  color: #616161;
+}
+
+.subtitle-span {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #000;
+}
+
+.bluetint {
+  color: cornflowerblue;
+}
+
+.margin10 {
+  margin: 10px;
+}
+
+.greenCircle {
+  color: green;
+}
+
+.medium-text {
+  color: #616161;
+  font-size: 15px;
+}
+
+.small-text {
+  font-size: 13px;
+}
+
+.fa-external-link-square {
+  color: lightgray;
+}
+
+.medium-text-black {
+  margin-top: 8px;
+  color: #000;
+  font-size: 15px;
+}
+
+.margin-left-4 {
+  margin-left: 4px;
+}
+
+.sidebar-action{
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.sidebar-action span{
+  padding-left: 20px;
+  font-size: 15px;
+}
+
+.sidebar-action:hover{
+  color: blue;
+  font-weight: 500;
+  background: lightblue
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
