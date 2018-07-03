@@ -3,7 +3,7 @@ import { Card, CardBody, Fa } from "mdbreact";
 import { Line } from "react-chartjs-2";
 import { Container } from "mdbreact";
 import { data, dataLine2 } from "../constants";
-import { Header, Sidebar } from "../components";
+import { Header, Sidebar, UserActivity } from "../components";
 
 class DndDashboard extends Component {
   constructor(props) {
@@ -22,14 +22,10 @@ class DndDashboard extends Component {
   render() {
     return (
       <div className="flex-container">
-        <div>
-          <Header />
-        </div>
         <div className="content row" style={{ margin: "0px" }}>
-          <Sidebar />
-          <div className="col-10" style={{ padding: "0px" }}>
+          <div className="col-12" style={{ padding: "0px" }}>
             <div className="header">
-              <h4 style={{ display: "inline" }}>Dashboard</h4>
+              <h4 style={{ display: "inline" }}>Team Dashboard</h4>
               <div
                 style={{ display: "inline", float: "right" }}
                 className="customise-icon"
@@ -50,15 +46,7 @@ class DndDashboard extends Component {
             </div>
             <div className="row m0">
               <div className="col-4 p0">
-                <Card className="genericCard">
-                  <CardBody className="border-bottom">
-                    <h2 className="genericCardHTag"> Project </h2>
-                  </CardBody>
-
-                  <CardBody className="border-bottom">
-                    <h2 className="genericCardHTag"> ID : 124874511451 </h2>
-                  </CardBody>
-                </Card>
+                <UserActivity />
 
                 <Card className="genericCard">
                   <CardBody className="border-bottom">
@@ -140,7 +128,11 @@ class DndDashboard extends Component {
                     <Container>
                       <Line data={data} />
                     </Container>
-                    <i className="fa fa-square bluetint" aria-hidden="true" style={{marginRight:"5px"}}/>
+                    <i
+                      className="fa fa-square bluetint"
+                      aria-hidden="true"
+                      style={{ marginRight: "5px" }}
+                    />
                     <span className="genericCardHTagChild">
                       Requests : 0.0333
                     </span>
@@ -158,7 +150,11 @@ class DndDashboard extends Component {
                     <Container>
                       <Line data={dataLine2} />
                     </Container>
-                    <i className="fa fa-square bluetint" aria-hidden="true" style={{marginRight:"5px"}}/>
+                    <i
+                      className="fa fa-square bluetint"
+                      aria-hidden="true"
+                      style={{ marginRight: "5px" }}
+                    />
                     <span className="genericCardHTagChild">
                       Requests : 0.0267
                     </span>
