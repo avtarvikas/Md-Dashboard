@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import App from "./App.js";
 import DndDashboard from "./containers/DndDashboard"
+import Dnd from "./containers/DND"
 
 const RootRouter = () => (
   <BrowserRouter>
@@ -10,7 +11,7 @@ const RootRouter = () => (
       <div>
         <Switch>
           <Route exact path="/" component={DndDashboard} />
-          {/* <Route exact path="/mycart" component={Cart} /> */}
+          <Route exact path="/dnd" component={Dnd} />
         </Switch>
       </div>
     </App>

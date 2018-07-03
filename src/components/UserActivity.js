@@ -33,8 +33,10 @@ const UserActivity = () => {
               >
                 {user[0].name} {user[0].lastname}
               </span>
-              <div style={{float:"right", width:"55%"}}>
-                <div style={{float:"right", fontSize:"15px"}}>{barPercentage}</div>
+              <div style={{ float: "right", width: "55%" }}>
+                <div style={{ float: "right", fontSize: "15px" }}>
+                  {barPercentage}
+                </div>
                 <div className="pr-bar-container">
                   <div className="pr-bar" style={{ width: barPercentage }} />
                 </div>
