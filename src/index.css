@@ -21,7 +21,6 @@ input[type="text"] {
 .header {
   padding: 15px 20px;
   border-bottom: 1px solid lightgrey;
-  height: 3.5rem;
 }
 
 .header h4 {
@@ -139,7 +138,7 @@ a {
 
 .genericCard {
   height: auto;
-  margin: 16px 10px 10px 16px;
+  /* margin: 16px 10px 10px 16px; */
 }
 
 .card-title {
@@ -167,8 +166,6 @@ a {
 
 .border-bottom {
   border-bottom: 1px solid #eee;
-  margin: 0px;
-  padding: 0.8rem !important;
 }
 
 .iconsSize {
@@ -300,4 +297,49 @@ a {
   height: 10px;
   width: 59%;
   background: #12b168;
+}
+
+.card {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border: 0;
+  font-weight: 400;
+}
+.arrow-down-icon,
+.setting-icon {
+  cursor: pointer;
+}
+.setting-options {
+  color: #6868c0;
+  width: 100%;
+  padding: 6px 15px;
+}
+.setting-options:hover {
+  background: #6868c0;
+  color: white;
+  cursor: pointer;
+}
+
+.widget-setting {
+  position: absolute;
+  width: 130px;
+  font-size: 12px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  top: 7px;
+  background: #fff;
+  right: 10px;
+  padding-top: 5px;
 }
