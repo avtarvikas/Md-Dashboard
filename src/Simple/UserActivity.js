@@ -12,27 +12,33 @@ class UserActivity extends Component {
     });
   }
 
-  componentDidMount(){
-    let self = this;
-    document.addEventListener('click',function(e){
-      if(e.target.className != 'setting-icon' && e.target.className != 'widget-setting' && e.target.className != 'setting-options border-bottom' && e.target.className != 'setting-options'){
-        self.setState({
-          showSetting: false
-        })
-      }
-    })
+  componentDidMount() {
+    window.addEventListener("click", this.handleOutsideClick);
   }
 
-  componentWillUnmount(){
-    document.removeEventListener('click')
+  componentWillUnmount() {
+    window.removeEventListener("click", this.handleOutsideClick);
+  }
+
+  handleOutsideClick =(e)=> {
+    if (
+      e.target.className != "setting-icon" &&
+      e.target.className != "widget-setting" &&
+      e.target.className != "setting-options border-bottom" &&
+      e.target.className != "setting-options"
+    ) {
+      this.setState({
+        showSetting: false
+      });
+    }
   }
 
   render() {
-    const { text } = this.props;
+    const { handleDeleteWidget, index } = this.props;
     return (
       <div className=" card genericCard">
         <div className="widget-header">
-          <span>Users activity{text}</span>
+          <span>Users activity</span>
           <div className="setting">
             <span>Weekly</span>
             <i className="arrow-down-icon" />
@@ -45,7 +51,12 @@ class UserActivity extends Component {
             {this.state.showSetting ? (
               <div className="widget-setting">
                 <div className="setting-options border-bottom">Edit Widget</div>
-                <div className="setting-options">Delete Widget</div>
+                <div
+                  className="setting-options"
+                  onClick={() => handleDeleteWidget(index)}
+                >
+                  Delete Widget
+                </div>
               </div>
             ) : (
               ""
@@ -54,6 +65,7 @@ class UserActivity extends Component {
         </div>
         <div className="widget-body">
           {Object.keys(data.weekly).map((element, i) => {
+            if (i > 4) return;
             const user = data.users.filter(user => user.id === element);
 
             if (user.length === 0) return;
@@ -69,7 +81,7 @@ class UserActivity extends Component {
                 >
                   {user[0].name} {user[0].lastname}
                 </span>
-                <div style={{ float: "right", width: "55%" }}>
+                <div style={{ float: "right", width: "50%" }}>
                   <div style={{ float: "right", fontSize: "15px" }}>
                     {barPercentage}
                   </div>

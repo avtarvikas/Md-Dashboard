@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: #eeeeee !important;
 }
 
 .flyout {
@@ -246,21 +247,41 @@ a {
 }
 
 /*Dnd DashBoard*/
+.pt-10{
+  padding-top: 10px;
+}
+.primary {
+  background-color: #8197bc !important;
+  color: #fff !important;
+  padding: 5px 15px !important; 
+}
+.dnd-header {
+  padding: 15px 1px 0px;
+  margin: 0px !important;
+}
+
+.dnd-header h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #43587d;
+}
 
 .widget-header {
   border-bottom: 1px solid #dbdbdb;
   padding: 10px 14px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .widget-body {
   padding: 10px 14px;
   font-size: 16px;
+  height: 215px;
+  overflow: auto;
 }
 .arrow-down-icon {
   background-image: url("assets/Arrowdown - icon - selected.svg");
   background-repeat: no-repeat;
-  padding: 6px 11px;
+  padding: 9px 11px;
   background-position: -6px 2px;
 }
 
@@ -273,11 +294,11 @@ a {
 .setting {
   float: right;
   color: #9d9d9d;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .user-content {
-  margin: 20px 0px;
+  margin: 17px 0px;
   font-size: 12px;
 }
 
@@ -310,7 +331,7 @@ a {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 5px;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
     0 2px 10px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -322,12 +343,12 @@ a {
   cursor: pointer;
 }
 .setting-options {
-  color: #6868c0;
+  color: #8197bc;
   width: 100%;
   padding: 6px 15px;
 }
 .setting-options:hover {
-  background: #6868c0;
+  background: #8197bc;
   color: white;
   cursor: pointer;
 }
@@ -342,4 +363,12 @@ a {
   background: #fff;
   right: 10px;
   padding-top: 5px;
+}
+
+.move-here {
+  position: absolute;
+  top: 45%;
+  left: 42%;
+  font-weight: 600;
+  color: #5c5cb4
 }
