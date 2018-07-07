@@ -17,7 +17,7 @@ class DndDashboard extends Component {
     super(props);
     this.moveCard = this.moveCard.bind(this);
     this.state = {
-      open: true,
+      open: false,
       selectedWidget: 1,
       cards: [],
       currentCards: []

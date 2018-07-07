@@ -34,7 +34,13 @@ class UserActivity extends Component {
   };
 
   render() {
-    const { handleDeleteWidget, index, widgetId } = this.props;
+    const {
+      handleDeleteWidget,
+      index,
+      widgetId,
+      onEditHandler,
+      filterData
+    } = this.props;
     return (
       <div className=" card genericCard">
         <div className="widget-header">
@@ -50,7 +56,12 @@ class UserActivity extends Component {
             />
             {this.state.showSetting ? (
               <div className="widget-setting">
-                <div className="setting-options border-bottom">Edit Widget</div>
+                <div
+                  className="setting-options border-bottom"
+                  onClick={() => onEditHandler()}
+                >
+                  Edit Widget
+                </div>
                 <div
                   className="setting-options"
                   onClick={() => handleDeleteWidget(index, widgetId)}
@@ -65,7 +76,7 @@ class UserActivity extends Component {
         </div>
         <div className="widget-body">
           {Object.keys(data.weekly).map((element, i) => {
-            if (i > 4) return;
+            if (i > filterData.noOfUser - 1) return;
             const user = data.users.filter(user => user.id === element);
 
             if (user.length === 0) return;

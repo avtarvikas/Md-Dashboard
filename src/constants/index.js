@@ -1,11 +1,11 @@
 export const data = [
   {
     id: 1,
-    widgetId: "none"
+    widgetId: "none",
   },
   {
     id: 2,
-    widgetId: "none"
+    widgetId: "UserActivity"
   },
   {
     id: 3,

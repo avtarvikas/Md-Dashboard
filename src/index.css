@@ -494,3 +494,32 @@ a {
   left: 81%;
   cursor: pointer;
 }
+
+.form-group label {
+  font-size: 11px;
+  color: #8197bc;
+  display: block;
+}
+
+.form-group input {
+  outline: none;
+  border: 1px solid #bdd4fa;
+  border-radius: 3px;
+  padding: 4px 8px;
+}
+
+.form-group span {
+  font-size: 12px;
+  padding: 0px 5px;
+  vertical-align: text-top;
+  margin-right: 10px;
+  color: #8197bc;
+}
+
+.edit-widget-action-button {
+  position: relative;
+  top: 13%;
+  float: right;
+  cursor: pointer;
+  width: fit-content;
+}
