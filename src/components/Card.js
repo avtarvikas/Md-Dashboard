@@ -91,7 +91,6 @@ class Card extends Component {
       connectDropTarget
     } = this.props;
     const opacity = isDragging ? 0.3 : 1;
-    console.log(this.props);
 
     return connectDropTarget(
       <div className="col-md-4" style={{ padding: "0px" }}>

@@ -1,9 +1,5 @@
-import { setInitialProductValue, setCartData } from "./taskData";
+import { setWidgetData } from "./widgetData";
 
-export const getProductData = (data) => dispatch => {
-  dispatch(setInitialProductValue(data))
-}
-
-export const updateCart = () => dispatch => {
-  dispatch(setCartData())
+export const setCardData = (data) => dispatch => {
+  dispatch(setWidgetData(data))
 }

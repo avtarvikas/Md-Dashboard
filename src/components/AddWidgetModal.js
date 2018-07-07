@@ -1,10 +1,8 @@
 import React from "react";
-import FlatButton from "material-ui/FlatButton";
-import RaisedButton from "material-ui/RaisedButton";
 import image from "../assets/users activity widget picture.png";
-import removeWidget from "../assets/Removewidget - icon.svg";
 import cancleButton from "../assets/cancelbutton - web - default.svg";
 import saveButton from "../assets/savebutton - web - default.svg";
+import Sidebar from "./Sidebar";
 import _ from "underscore";
 
 const AddWidgetModal = ({
@@ -17,43 +15,11 @@ const AddWidgetModal = ({
   return (
     <div className="content" style={{ height: "300px", width: "100%" }}>
       <div style={{ width: "100%", height: "100%" }}>
-        <div className="side-bar">
-          <input placeholder="Search" />
-          <ul>
-            <li
-              style={{
-                background: data.selectedWidget == 1 ? "#ffffff" : ""
-              }}
-              onClick={() => {
-                selectWidget(1);
-              }}
-            >
-              <i
-                className="fa fa-address-card"
-                aria-hidden="true"
-                style={{ marginRight: "5px" }}
-              />Widget Directory
-            </li>
-            <li
-              style={{
-                background: data.selectedWidget == 2 ? "#ffffff" : ""
-              }}
-              onClick={() => {
-                selectWidget(2);
-              }}
-            >
-              <i
-                className="fa fa-user"
-                aria-hidden="true"
-                style={{ marginRight: "5px" }}
-              />My Widget
-            </li>
-          </ul>
-        </div>
+        <Sidebar data={data} selectWidget={selectWidget} />
         <div className="add-widget-body">
           <div className="row add-widget-body-content">
             <div className="image-content col-md-3">
-              <img src={image} />
+              <img src={image} alt="widget" />
             </div>
             <div className="description col-md-6 p0 m0">
               <label className="description-header">
@@ -97,6 +63,7 @@ const AddWidgetModal = ({
           </div>
           <div className="widget-action-button">
             <img
+              alt=""
               src={cancleButton}
               style={{ marginRight: "10px" }}
               onClick={() => {
@@ -104,6 +71,7 @@ const AddWidgetModal = ({
               }}
             />
             <img
+              alt=""
               src={saveButton}
               onClick={() => {
                 onCloseModal();

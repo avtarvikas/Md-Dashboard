@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import App from "./App.js";
 import DndDashboard from "./containers/DndDashboard"
-import Simple from "./Simple"
+// import Simple from "./Simple"
 
 const RootRouter = () => (
   <BrowserRouter>
@@ -11,7 +11,7 @@ const RootRouter = () => (
       <div>
         <Switch>
           <Route exact path="/" component={DndDashboard} />
-          <Route exact path="/dnd" component={Simple} />
+          {/* <Route exact path="/dnd" component={Simple} /> */}
         </Switch>
       </div>
     </App>

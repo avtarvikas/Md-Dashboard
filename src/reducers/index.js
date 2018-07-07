@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import taskData from "../actions/taskData";
+import widgetData from "../actions/widgetData";
 
-const rootReducer = combineReducers({ taskData });
+const rootReducer = combineReducers({ widgetData });
 
 export default rootReducer;
