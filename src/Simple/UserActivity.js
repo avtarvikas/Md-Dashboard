@@ -20,7 +20,7 @@ class UserActivity extends Component {
     window.removeEventListener("click", this.handleOutsideClick);
   }
 
-  handleOutsideClick =(e)=> {
+  handleOutsideClick = e => {
     if (
       e.target.className != "setting-icon" &&
       e.target.className != "widget-setting" &&
@@ -31,10 +31,10 @@ class UserActivity extends Component {
         showSetting: false
       });
     }
-  }
+  };
 
   render() {
-    const { handleDeleteWidget, index } = this.props;
+    const { handleDeleteWidget, index, widgetId } = this.props;
     return (
       <div className=" card genericCard">
         <div className="widget-header">
@@ -53,7 +53,7 @@ class UserActivity extends Component {
                 <div className="setting-options border-bottom">Edit Widget</div>
                 <div
                   className="setting-options"
-                  onClick={() => handleDeleteWidget(index)}
+                  onClick={() => handleDeleteWidget(index, widgetId)}
                 >
                   Delete Widget
                 </div>

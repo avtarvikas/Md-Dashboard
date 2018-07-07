@@ -38,11 +38,10 @@ const cardTarget = {
     // Determine rectangle on screen
     const hoverBoundingRect = findDOMNode(component).getBoundingClientRect();
     console.log(hoverBoundingRect);
-    
 
     // Get vertical middle
     const hoverMiddleY = (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
-    
+
     // Determine mouse position
     const clientOffset = monitor.getClientOffset();
 
@@ -99,21 +98,12 @@ class Card extends Component {
         {widgetId !== "none" ? (
           connectDragSource(
             <div style={{ ...style, opacity }}>
-              <UserActivity {...this.props}/>
+              <UserActivity {...this.props} />
             </div>
           )
         ) : (
-          <div
-            style={{
-              height: "260px",
-              padding: "0px",
-              margin: "16px 10px 10px 16px",
-              borderRadius: "0.25rem",
-              border: "1px dashed #8197bc",
-              textAling: "center"
-            }}
-          >
-            <span className="move-here">Drop Here</span>
+          <div className="move-here">
+            <span>Drop Here</span>
           </div>
         )}
       </div>

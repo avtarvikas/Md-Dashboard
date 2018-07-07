@@ -247,13 +247,25 @@ a {
 }
 
 /*Dnd DashBoard*/
-.pt-10{
+.pt-10 {
   padding-top: 10px;
 }
+
+.p0 {
+  padding: 0px;
+}
+
+.m0 {
+  margin: 0px;
+}
+
 .primary {
   background-color: #8197bc !important;
   color: #fff !important;
-  padding: 5px 15px !important; 
+  padding: 5px 15px !important;
+  text-align: right;
+  display: inline;
+  font-weight: 500;
 }
 .dnd-header {
   padding: 15px 1px 0px;
@@ -366,9 +378,119 @@ a {
 }
 
 .move-here {
+  height: 260px;
+  padding: 0px;
+  margin: 16px 10px 10px 16px;
+  border-radius: 0.25rem;
+  border: 1px dashed rgb(129, 151, 188);
+}
+
+.move-here span {
   position: absolute;
   top: 45%;
   left: 42%;
   font-weight: 600;
-  color: #5c5cb4
+  color: #5c5cb4;
+}
+
+.side-bar {
+  float: left;
+  width: 20%;
+  height: 100%;
+  border-right: 1px solid #a9b7cf;
+  background: #e5e6e7;
+}
+
+.side-bar input {
+  width: 92%;
+  margin: 13px 10px;
+  border-radius: 5px;
+  outline: none;
+  padding: 5px;
+  border: 1px solid #8197bc;
+}
+
+.side-bar ul {
+  list-style: none;
+  padding-left: 3%;
+}
+
+.side-bar li {
+  padding: 7px;
+  margin-left: -5px;
+  cursor: pointer;
+  color: #8197bc;
+}
+
+.add-widget-body {
+  float: right;
+  width: 80%;
+}
+
+.add-widget-body-content {
+  margin: 0px !important;
+  border-bottom: 1px solid #a9b7cf;
+  padding: 20px 0px;
+  height: 142px;
+}
+
+.add-widget-body-content img {
+  height: 100%;
+  width: 100%;
+}
+
+.add-widget-body-content.description {
+  width: 60%;
+  margin: 0px 5px;
+}
+
+.description {
+  margin: 0px 20px;
+}
+
+.description-header {
+  font-weight: 900;
+  margin-bottom: 0px;
+}
+
+.tags label {
+  font-weight: 600;
+  font-size: 15px;
+  color: rgb(130, 178, 237);
+}
+
+.tags span {
+  padding: 4px 15px;
+  font-size: 10px;
+  background: rgb(205, 225, 244);
+  border-radius: 5px;
+  color: #8197bc;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.action-button button {
+  margin-left: 2rem;
+}
+
+.remove-btn {
+  background: #dd1010;
+  border: none;
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.description-content {
+  font-size: 13px;
+}
+
+.widget-action-button {
+  position: absolute;
+  bottom: 4%;
+  left: 81%;
+  cursor: pointer;
 }
