@@ -1,24 +1,39 @@
 import React from "react";
-import { Fa } from "mdbreact";
 
-const Sidebar = () => {
+const Sidebar = ({ data, selectWidget }) => {
   return (
-    <div className="col-2 sidebar" style={{ padding: "0px" }}>
-      <div>
-        <div className="header" style={{marginBottom:"10px"}}>
-          <h4 style={{ color: "#746f6f" }}>
-            <Fa icon="home" /> Home
-          </h4>
-        </div>
-        <div className="sidebar-action">
-          <Fa icon="dashboard" />
-          <span> Dashboard</span>
-        </div>
-        <div className="sidebar-action">
-          <Fa icon="th-list" />
-          <span> Activity</span>
-        </div>
-      </div>
+    <div className="side-bar">
+      <input placeholder="Search" />
+      <ul>
+        <li
+          style={{
+            background: data.selectedWidget == 1 ? "#ffffff" : ""
+          }}
+          onClick={() => {
+            selectWidget(1);
+          }}
+        >
+          <i
+            className="fa fa-address-card"
+            aria-hidden="true"
+            style={{ marginRight: "5px" }}
+          />Widget Directory
+        </li>
+        <li
+          style={{
+            background: data.selectedWidget == 2 ? "#ffffff" : ""
+          }}
+          onClick={() => {
+            selectWidget(2);
+          }}
+        >
+          <i
+            className="fa fa-user"
+            aria-hidden="true"
+            style={{ marginRight: "5px" }}
+          />My Widget
+        </li>
+      </ul>
     </div>
   );
 };
